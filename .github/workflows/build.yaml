@@ -21,7 +21,8 @@ jobs:
     permissions:
       contents: read
       packages: write
-      id-token: write  # for attestation
+      id-token: write       # for attestation
+      attestations: write   # for attest-build-provenance
 
     steps:
       - name: Resolve upstream version
