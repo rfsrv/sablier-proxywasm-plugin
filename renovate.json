@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "regexManagers": [
+    {
+      "fileMatch": ["\\.github/workflows/.*\\.ya?ml$"],
+      "matchStrings": [
+        "upstream_version:\\s+description:.*\\n.*default:\\s+\"(?<currentValue>[^\"]+)\""
+      ],
+      "depNameTemplate": "sablierapp/sablier-proxywasm-plugin",
+      "datasourceTemplate": "github-releases"
+    }
+  ]
+}
